@@ -150,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-nx-ywe">
-                                <rect key="frame" x="160" y="613" width="94" height="61"/>
+                                <rect key="frame" x="160" y="548" width="94" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Agregar"/>
                                 <connections>
@@ -175,6 +175,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lz2-JN-g9s">
+                                <rect key="frame" x="94" y="475" width="55" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vb0-pt-lkg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,6 +190,7 @@
                         <outlet property="_Sku" destination="0Ml-xe-8dY" id="fqL-q9-xBA"/>
                         <outlet property="_Title" destination="1UV-Mg-1vF" id="1gt-Av-n5Z"/>
                         <outlet property="image64" destination="4LD-yR-4HS" id="rUF-sE-i2C"/>
+                        <outlet property="imagePreview" destination="Lz2-JN-g9s" id="ZDe-Ze-AWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djQ-zQ-Lgn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,6 +290,7 @@
     </scenes>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>

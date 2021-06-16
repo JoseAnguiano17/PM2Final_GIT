@@ -14,6 +14,7 @@ class EditController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     @IBOutlet weak var _Description: UITextView!
     @IBOutlet weak var _Sku: UITextField!
     @IBOutlet weak var _Price: UITextField!
+    @IBOutlet weak var imagePreview: UIImageView!
     let WS = ProdWS()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,8 @@ class EditController: UIViewController, UIImagePickerControllerDelegate,UINaviga
             try? jpegData.write(to: imagePath)
             let base64 = image.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
             image64.text = base64;
+            imagePreview.image = image
+
         }
 
         dismiss(animated: true)
