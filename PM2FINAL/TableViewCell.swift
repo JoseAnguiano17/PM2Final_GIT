@@ -8,6 +8,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    public static var context: TableViewCell?
 
     @IBOutlet weak var nombreProducto: UILabel!
     @IBOutlet weak var imgProducto: UIImageView!
@@ -27,6 +28,15 @@ class TableViewCell: UITableViewCell {
     }
     
     @IBAction func test(_ sender: Any) {
+    }
+    
+    func changeColor(_ option: Int){
+        if option == 1 {
+            self.contentView.backgroundColor = UIColor.white
+        }else{
+            self.contentView.backgroundColor = UIColor.darkGray
+        }
+        
     }
     
 }

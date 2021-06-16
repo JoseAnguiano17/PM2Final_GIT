@@ -9,6 +9,7 @@ import UIKit
 
 class EditController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    public static var context : EditController?
     @IBOutlet weak var _Title: UITextField!
     @IBOutlet weak var _Description: UITextView!
     @IBOutlet weak var _Sku: UITextField!
@@ -16,7 +17,17 @@ class EditController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     let WS = ProdWS()
     override func viewDidLoad() {
         super.viewDidLoad()
+        EditController.context=self
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func changeColor(_ option: Int){
+        if option == 1 {
+            self.view.backgroundColor = UIColor.white
+        }else{
+            self.view.backgroundColor = UIColor.darkGray
+        }
     }
     
     @IBAction func AgregarProducto(_ sender: Any) {

@@ -10,13 +10,16 @@ import UIKit
 class TableViewController: UITableViewController {
     
     public static var CONTEXTO : TableViewController?
+    public static var controllerf: ViewController?
     @IBOutlet var MytableView: UITableView!
     var WS = ProdWS()
     var items : [Product] = []
     override func viewDidLoad() {
         ReloadView()
         TableViewController.CONTEXTO = self;
+        TableViewController.controllerf?.segmentChanged("")
     }
+
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,6 +53,17 @@ class TableViewController: UITableViewController {
             self.tableView.reloadData()
             print("Items: \(self.items.count)")
         }
+    }
+    
+    func changeColor(_ option: Int){
+        print("entro")
+        if option == 1 {
+            tableView.backgroundColor = UIColor.white
+        }else{
+            tableView.backgroundColor = UIColor.darkGray
+        }
+           
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
