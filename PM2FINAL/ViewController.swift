@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    public static var status: ViewController?
+    public static var status: ViewController!
     @IBOutlet weak var onOffSwitch: UISwitch!
     
     @IBOutlet weak var labelSwitch: UILabel!
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController.status = self
         updateTheme()
         checkSwitchState()
     }
@@ -32,27 +33,25 @@ class ViewController: UIViewController {
     public func updateTheme(){
         let theme = userDefaults.string(forKey: themeKey)
         if theme == ligthTheme {
-            themeSegmented.selectedSegmentIndex = 0
-            TableViewController.CONTEXTO?.changeColor(1)
-            EditController.context?.changeColor(1)
-            TableViewCell.context?.changeColor(1)
-            view.backgroundColor = UIColor.white
-            
+            self.overrideUserInterfaceStyle = .light
+            TableViewController.CONTEXTO!.overrideUserInterfaceStyle = .light
+            EditController.context?.overrideUserInterfaceStyle = .light
         }else{
-            themeSegmented.selectedSegmentIndex = 1
-            TableViewController.CONTEXTO?.changeColor(2)
-            EditController.context?.changeColor(2)
-            TableViewCell.context?.changeColor(2)
-            view.backgroundColor = UIColor.darkGray
+            self.overrideUserInterfaceStyle = .dark
+            TableViewController.CONTEXTO!.overrideUserInterfaceStyle = .dark
+            EditController.context?.overrideUserInterfaceStyle = .dark
         }
     }
     
     func checkSwitchState(){
-        if userDefaults.bool(forKey: onOff_key) {
+        let bool = userDefaults.bool(forKey: onOff_key)
+        if bool {
             onOffSwitch.setOn(true, animated: false)
             labelSwitch.text = "ON"
             themeLabel.isHidden = false
             themeSegmented.isHidden = false
+            let state = userDefaults.string(forKey: themeKey) == darkTheme
+            themeSegmented.selectedSegmentIndex = state ? 1 : 0
         }else{
             onOffSwitch.setOn(false, animated: false)
             labelSwitch.text = "OFF"
@@ -65,14 +64,8 @@ class ViewController: UIViewController {
         switch themeSegmented.selectedSegmentIndex {
         case 0:
             userDefaults.setValue(ligthTheme, forKey: themeKey)
-            TableViewController.CONTEXTO?.changeColor(1)
-            EditController.context?.changeColor(1)
-            TableViewCell.context?.changeColor(1)
         case 1:
             userDefaults.setValue(darkTheme, forKey: themeKey)
-            TableViewController.CONTEXTO?.changeColor(2)
-            EditController.context?.changeColor(2)
-            TableViewCell.context?.changeColor(2)
         default:
             userDefaults.setValue(ligthTheme, forKey: themeKey)
         }
@@ -91,8 +84,8 @@ class ViewController: UIViewController {
             labelSwitch.text = "OFF"
             themeLabel.isHidden = true
             themeSegmented.isHidden = true
+            themeSegmented.selectedSegmentIndex = 0
+            segmentChanged(themeSegmented!)
         }
     }
-    
-    
 }

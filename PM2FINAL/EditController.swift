@@ -18,7 +18,7 @@ class EditController: UIViewController, UIImagePickerControllerDelegate,UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         EditController.context=self
-        // Do any additional setup after loading the view.
+        TableViewController.CONTEXTO?.updateTheme(self)
     }
     
     

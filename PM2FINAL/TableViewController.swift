@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import CoreMotion
+import AudioToolbox
 
 class TableViewController: UITableViewController {
     
     public static var CONTEXTO : TableViewController?
-    public static var controllerf: ViewController?
     @IBOutlet var MytableView: UITableView!
     var WS = ProdWS()
     var items : [Product] = []
     override func viewDidLoad() {
         ReloadView()
         TableViewController.CONTEXTO = self;
-        TableViewController.controllerf?.segmentChanged("")
+        updateTheme(self)
     }
 
     
@@ -104,6 +105,7 @@ class TableViewController: UITableViewController {
             } else {
                 self.WS.EliminarProducto(id: "\(id)",{(output) in
                     self.ReloadView()
+                    AudioServicesPlaySystemSound(1111)
                 })
             }
         }))
@@ -182,4 +184,12 @@ class TableViewController: UITableViewController {
         }
     }
     
+    public func updateTheme(_ context : UIViewController){
+        let theme = UserDefaults.standard.string(forKey: "themeKey")
+        if theme == "light" {
+            context.overrideUserInterfaceStyle = .light
+        }else{
+            context.overrideUserInterfaceStyle = .dark
+        }
+    }
 }
