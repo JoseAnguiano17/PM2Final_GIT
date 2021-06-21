@@ -20,6 +20,7 @@ class EditController: UIViewController, UIImagePickerControllerDelegate,UINaviga
         super.viewDidLoad()
         EditController.context=self
         TableViewController.CONTEXTO?.updateTheme(self)
+        self.hideKeyboardWhenTappedAround() 
     }
     
     

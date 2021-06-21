@@ -11,6 +11,7 @@
 		B02859872679655700713CCF /* ImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02859862679655700713CCF /* ImageViewEx.swift */; };
 		B07751BB26784E82005A0B91 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07751BA26784E82005A0B91 /* TableViewController.swift */; };
 		B07751BD26785F76005A0B91 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07751BC26785F76005A0B91 /* TableViewCell.swift */; };
+		B0775E7B267D621200656552 /* ViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0775E7A267D621200656552 /* ViewControllerEx.swift */; };
 		B0EA26022677A8EB0055D5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA26012677A8EB0055D5A8 /* AppDelegate.swift */; };
 		B0EA26042677A8EB0055D5A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA26032677A8EB0055D5A8 /* SceneDelegate.swift */; };
 		B0EA26062677A8EB0055D5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA26052677A8EB0055D5A8 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		B02859862679655700713CCF /* ImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewEx.swift; sourceTree = "<group>"; };
 		B07751BA26784E82005A0B91 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B07751BC26785F76005A0B91 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B0775E7A267D621200656552 /* ViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEx.swift; sourceTree = "<group>"; };
 		B0EA25FE2677A8EB0055D5A8 /* PM2FINAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PM2FINAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EA26012677A8EB0055D5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0EA26032677A8EB0055D5A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				B0285981267922CE00713CCF /* WebServiceEx.swift */,
 				B02859862679655700713CCF /* ImageViewEx.swift */,
+				B0775E7A267D621200656552 /* ViewControllerEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				B0EA26062677A8EB0055D5A8 /* ViewController.swift in Sources */,
 				B07751BD26785F76005A0B91 /* TableViewCell.swift in Sources */,
 				B07751BB26784E82005A0B91 /* TableViewController.swift in Sources */,
+				B0775E7B267D621200656552 /* ViewControllerEx.swift in Sources */,
 				B02859872679655700713CCF /* ImageViewEx.swift in Sources */,
 				B0EA26372677D61F0055D5A8 /* EditController.swift in Sources */,
 				B0EA26022677A8EB0055D5A8 /* AppDelegate.swift in Sources */,
@@ -485,9 +489,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGGM9ZZDJU;
 				INFOPLIST_FILE = PM2FINAL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,9 +510,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGGM9ZZDJU;
 				INFOPLIST_FILE = PM2FINAL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
